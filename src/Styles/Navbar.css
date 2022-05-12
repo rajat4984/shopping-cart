@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.preview-link {
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+  margin: 1em;
+  font-size: 1.5rem;
+}
+
+.preview-link:hover, .brand:hover {
+  background-color: rgb(219, 219, 219);
+  color: black;
+  padding: 0.5em;
+  border-radius: 5px;
+}

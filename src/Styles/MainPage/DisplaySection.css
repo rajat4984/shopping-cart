@@ -1,0 +1,22 @@
+.display-container {
+  background-color: rgb(211, 211, 211);
+  color: rgb(44, 44, 44);
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.slogan {
+  position: relative;
+  top: 50px;
+  padding: 3%;
+  font-size: 2.5rem;
+}
+
+.shoe-image {
+  width: 35%;
+}
+
+.slogan-sub {
+  font-size: 1rem;
+}

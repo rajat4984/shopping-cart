@@ -1,0 +1,6 @@
+.mj-container {
+  color: rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
