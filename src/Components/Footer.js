@@ -5,7 +5,7 @@ function Footer(props) {
     <div className="footer">
       {props.footerText}
       <a href="https://github.com/rajat4984">
-        <i class="bi bi-github"></i>
+        <i className="bi bi-github"></i>
       </a>
     </div>
   );

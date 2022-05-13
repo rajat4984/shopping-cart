@@ -10,7 +10,7 @@ export default class Navbar extends Component {
       <div className="navbar">
         <div className="brand">{this.props.brand}</div>
         <div className="preview">
-          <a href="#" className="preview-link"><i className="bi bi-search"></i></a>
+          <a href="#" className="preview-link"><i class="bi bi-shop-window"></i></a>
           <a href="#" className="preview-link"><i className="bi bi-cart"></i></a>
         </div>
       </div>

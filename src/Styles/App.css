@@ -4,10 +4,11 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Signika Negative", sans-serif;
 }
 
 body {
-  font-family: "Signika Negative", sans-serif;
+
   color: white;
   background-image: linear-gradient(
     to right top,
@@ -24,22 +25,23 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: whitesmoke;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--myGrey);
+  background: grey;
   border-radius: 10px;
 }
 
 a {
   text-decoration: none;
-  color: rgb(44, 44, 44);
+  color: white;
 }
 
 .footer {
-  background-color: rgb(211, 211, 211);
-  color: rgb(44, 44, 44);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
   padding: 2%;
   font-size: 1.2rem;
   text-align: center;
