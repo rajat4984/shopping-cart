@@ -14,7 +14,7 @@ export default class Navbar extends Component {
         </Link>
         <div className="preview">
           <Link to="shopping" className="preview-link">
-            <i class="bi bi-shop-window"></i>
+            <i className="bi bi-shop-window"></i>
           </Link>
           <Link to="cart" className="preview-link">
             <i className="bi bi-cart"></i>
