@@ -1,10 +1,10 @@
 import Cart from "./Components/Cart";
 import Footer from "./Components/Footer";
 import DisplaySection from "./Components/MainPage/DisplaySection";
-import MjSection from "./Components/MainPage/MjSection";
 import Navbar from "./Components/Navbar";
 import Shopping from "./Components/Shopping";
 import "./Styles/App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   let shoeArray = [
@@ -37,14 +37,27 @@ function App() {
     "Air Jordan 2 SE",
   ];
   return (
-    <div className="App">
-      <Navbar brand="Air Jordans" />
-      {/* <DisplaySection/>
-      <MjSection/> */}
-      {/* <Shopping shoeArray = {shoeArray} shoeNameArray = {shoeNameArray} /> */}
-      <Cart shoeArray = {shoeArray} shoeNameArray = {shoeNameArray} />
-      <Footer footerText="Made by Rajat " />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar brand="Air Jordans" />
+        <Routes>
+          <Route path="/" element={<DisplaySection />} />
+          <Route
+            path="shopping"
+            element={
+              <Shopping shoeArray={shoeArray} shoeNameArray={shoeNameArray} />
+            }
+          />
+          <Route
+            path="cart"
+            element={
+              <Cart shoeArray={shoeArray} shoeNameArray={shoeNameArray} />
+            }
+          />
+        </Routes>
+        <Footer footerText="Made by Rajat " />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,57 @@
+.cart-container {
+  margin: 6% 0 10% 0;
+  display: grid;
+  grid-template-columns: repeat(1, 700px);
+  justify-content: space-around;
+  justify-items: center;
+  grid-row-gap: 4%;
+  
+}
+.cart-card {
+    color: black;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  transition: 0.3s;
+  box-shadow: 1px 2px 3px 4px rgba(36, 35, 35, 0.808);
+}
+
+.cart-shoe-img {
+  width: 15%;
+}
+
+.cart-delete {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.cart-delete:hover {
+  padding: 0.7em;
+  color: white;
+  background-color: rgba(49, 49, 49, 0.938);
+}
+
+.checkout-container{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.checkout-btn{
+    font-size: 1rem;
+    padding: .2em .5em;
+    outline: none;
+    border-radius: 5px;
+    transition: .3s;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.checkout-btn:hover{
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(49, 49, 49, 0.938);
+}

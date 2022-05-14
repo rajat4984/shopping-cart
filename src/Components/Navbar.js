@@ -1,17 +1,24 @@
 import React, { Component } from "react";
-import "../Styles/Navbar.css"
+import "../Styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
   render() {
     return (
       <div className="navbar">
-        <div className="brand">{this.props.brand}</div>
+        <Link to="/" className="brand">
+          {this.props.brand}
+        </Link>
         <div className="preview">
-          <a href="#" className="preview-link"><i class="bi bi-shop-window"></i></a>
-          <a href="#" className="preview-link"><i className="bi bi-cart"></i></a>
+          <Link to="shopping" className="preview-link">
+            <i class="bi bi-shop-window"></i>
+          </Link>
+          <Link to="cart" className="preview-link">
+            <i className="bi bi-cart"></i>
+          </Link>
         </div>
       </div>
     );
