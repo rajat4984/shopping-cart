@@ -10,7 +10,11 @@ function Card(props) {
           alt=""
         ></img>
         <p className="shoe-name">{props.shoeNameArray[index]}</p>
-        <button className="btn">Add to cart</button>
+        <div className="btn-container">
+          <i className="bi bi-bag-dash add-btn"></i> 
+          <p className="qty">0</p>
+           <i className="bi bi-bag-plus less-btn"></i>
+        </div>
       </div>
     );
   });
