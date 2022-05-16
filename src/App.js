@@ -26,25 +26,30 @@ function App() {
   };
   const [qty, setQty] = useState([qtyArray]);
   const [components, setComponents] = useState([]);
+  const [checkOut,setCheckOut] = useState(0);
 
   const addToCart = (e) => {
-    const card = e.target.parentNode.parentNode;
+    const card = e.target.parentNode.parentNode.parentNode;
     const name = card.children[1].textContent;
     const image = card.children[0].getAttribute("alt");
     const key = card.getAttribute("id");
+    const price = card.children[2].children[1].textContent;
     const cartQty = 1;
 
+
     const element = [
-      <CartCard image={image} name={name} cartQty={cartQty} id={key} />,
+      <CartCard image={image} name={name} cartQty={cartQty} id={key} price={price} />,
     ];
 
+    setCheckOut(prevCheckOut => prevCheckOut + parseInt(price.slice(1,4)))
     setComponents([...components, element]);
-    if (components.length !== 0 && key === components[0][1]) {
-      console.log("hello");
-    }
   };
 
-  let shoeArray = [
+  // const increaseQty = () =>{
+
+  // }
+
+  const shoeArray = [
     "shoe1",
     "shoe2",
     "shoe3",
@@ -59,7 +64,11 @@ function App() {
     "shoe12",
   ];
 
-  let shoeNameArray = [
+  const shoePrice = [
+    100, 200, 250, 650, 350, 700, 120, 230, 470, 670, 900, 870,
+  ];
+
+  const shoeNameArray = [
     "Air Jordan 1 Elevate Low",
     "Air Jordan 1 Retro High OG",
     "Jordan One Take 3 PF",
@@ -87,6 +96,7 @@ function App() {
                 qty={qty}
                 shoeArray={shoeArray}
                 shoeNameArray={shoeNameArray}
+                shoePrice={shoePrice}
               />
             }
           />
@@ -97,6 +107,7 @@ function App() {
                 components={components}
                 shoeArray={shoeArray}
                 shoeNameArray={shoeNameArray}
+                checkOut = {checkOut}
               />
             }
           />

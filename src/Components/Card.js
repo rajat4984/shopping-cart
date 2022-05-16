@@ -9,11 +9,14 @@ function Card(props) {
           className="shoe-img"
           alt={element}
         ></img>
-        <p  className="shoe-name">{props.shoeNameArray[index]}</p>
-        <div className="btn-container">
-          <i className="bi bi-bag-dash less-btn"></i> 
-          <p className="qty">{props.qty[0].element}</p>
-           <i className="bi bi-bag-plus add-btn" onClick={props.addToCart}></i>
+        <p className="shoe-name">{props.shoeNameArray[index]}</p>
+        <div className="info-container">
+          <div className="btn-container">
+            <i className="bi bi-bag-dash less-btn"></i>
+            <p className="qty">{props.qty[0].shoe1}</p>
+            <i className="bi bi-bag-plus add-btn" onClick={props.addToCart}></i>
+          </div>
+          <p className="card-price">${props.shoePrice[index]}</p>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ function Cart(props) {
       })}
 
       {props.components.length !== 0 && <div className="checkout-container">
-        <div className="checkout-amount">Total: $100</div>
+        <div className="checkout-amount">Total: ${props.checkOut}</div>
         <button className="checkout-btn">Checkout</button>
       </div>}
     </div>
